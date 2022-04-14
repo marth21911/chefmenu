@@ -1,0 +1,24 @@
+@{
+    ViewData["ViewOne"] = "ViewOne";
+}
+@model Dish
+
+<div>
+    <a href="/">Home</a>
+
+
+
+
+
+
+
+    <h1>@ViewBag.OneDish.Name</h1>
+    <h3>@ViewBag.OneDish.Chef</h3>
+    --------------------------
+    <p>@ViewBag.OneDish.Description</p>
+    <h4>Calories : @ViewBag.OneDish.Calories</h4>
+    <h4>Tastiness : @ViewBag.OneDish.Tastiness</h4>
+
+    <a href="/OneDish/remove/@ViewBag.OneDish.DishID"><button class="btn btn-danger">Delete</button></a>
+    <a href="/edit/@ViewBag.OneDish.DishID"><button class="btn btn-success">Edit</button></a>
+</div>
